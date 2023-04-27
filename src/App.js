@@ -69,6 +69,7 @@ const Body = () => {
   }
 };
 
+
 const Home = () => {
   return (
     <main className="root">
@@ -80,6 +81,7 @@ const Home = () => {
       </Router>
       <Body />
       
+
     </main>
   );
 };
@@ -91,6 +93,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   
     <App />
+    
   
 );
 
