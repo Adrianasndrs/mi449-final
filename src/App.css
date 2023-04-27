@@ -1,0 +1,12 @@
+.img{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  border-radius: 20px;
+}
+
+.credit{
+  font-size: large;
+  list-style-type: none;
+  align-self: auto;
+}
