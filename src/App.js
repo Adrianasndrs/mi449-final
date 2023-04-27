@@ -4,7 +4,6 @@ import './App.css';
 import React, { useEffect, useState } from "react";
 import ReactDOM from 'react-dom';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
 import { createApi } from 'unsplash-js';
 
 
@@ -19,10 +18,10 @@ const PhotoComp = ({ photo }) => {
 
   return (
     <React.Fragment>
-      <img className="img" src={urls.regular} />
+      <img className="img" src={urls.regular} alt={""} />
       <a
         className="credit"
-        target="_blank"
+
         href={`https://unsplash.com/@${user.username}`}
       >
         {user.name}

@@ -10,21 +10,21 @@ const api = createApi({
   });
 
 function Navbar() {
-    const [click, setClick] = useState(false);
-    const [button, setButton] = useState(true);
+   // const [click, setClick] = useState(false);
+    //const [button, setButton] = useState(true);
 
-    const handleClick = () => setClick(!click);
-    const closeMobileMenu = () => setClick(false);
+   // const handleClick = () => setClick(!click);
+   // const closeMobileMenu = () => setClick(false);
 
     const PhotoComp = ({ photo }) => {
         const { user, urls } = photo;
       
         return (
           <React.Fragment>
-            <img className="img" src={urls.regular} />
+            <img className="img" src={urls.regular} alt={""} />
             <a
               className="credit"
-              target="_blank"
+              //target="_blank"
               href={`https://unsplash.com/@${user.username}`}
             >
               {user.name}
@@ -38,7 +38,7 @@ function Navbar() {
       
         useEffect(() => {
           api.search
-            .getPhotos({ query: 'kitten', orientation: 'landscape' })
+            .getPhotos({ query: 'cat', orientation: 'landscape' })
             .then((result) => {
               setPhotosResponse(result);
             })
@@ -79,17 +79,15 @@ function Navbar() {
             <Link to="/" className="navbar-logo" onClick={Randomize}>
                 CATIMGS <i className='fab fa-typo3'/>
             </Link>
-            <Link to="/" className="navbar-logo" onClick={Randomize}>
-                Randomize 
-            </Link>
-            
-            
-           
+
         </div>
     </nav>
+    
     </>
   )
+  
 }
+
 
 export default Navbar
 
